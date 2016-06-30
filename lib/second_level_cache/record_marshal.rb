@@ -35,7 +35,7 @@ module RecordMarshal
           attributes[name] = attributes[name].to_json
         end
       end
-      klass.defind_enums.each do |key,value|
+      klass.defined_enums.each do |key,value|
           attributes[key] = value[attributes[key]]
       end
       klass.instantiate(attributes)
